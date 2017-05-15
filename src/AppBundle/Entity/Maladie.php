@@ -1,0 +1,150 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: sandy
+ * Date: 15/05/2017
+ * Time: 17:34
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Class Maladie
+ *
+ * @ORM\Table(name="maladie")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\MaladieRepository")
+ */
+class Maladie
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, unique=true)
+     */
+    private $nom;
+
+    /**
+     * @Assert\Type(type="AppBundle\Entity\Traitement")
+     * @Assert\Valid()
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Traitement", mappedBy="maladie", cascade={"persist"})
+     */
+    private $traitement;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Espece", inversedBy="maladies")
+     * @ORM\JoinTable(name="maladies_especes")
+     */
+    private $especes;
+
+    /**
+     * @var
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\RendezVous", mappedBy="maladie")
+     */
+    private $rendezVouses;
+
+    public function __construct() {
+        $this->especes = new ArrayCollection();
+        $this->rendezVouses = new ArrayCollection();
+    }
+
+    function __toString()
+    {
+        return $this->getNom();
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTraitement()
+    {
+        return $this->traitement;
+    }
+
+    /**
+     * @param mixed $traitement
+     */
+    public function setTraitement($traitement)
+    {
+        $this->traitement = $traitement;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEspeces()
+    {
+        return $this->especes;
+    }
+
+    /**
+     * @param mixed $especes
+     */
+    public function setEspeces($especes)
+    {
+        $this->especes = $especes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRendezVouses()
+    {
+        return $this->rendezVouses;
+    }
+
+    /**
+     * @param mixed $rendezVouses
+     */
+    public function setRendezVouses($rendezVouses)
+    {
+        $this->rendezVouses = $rendezVouses;
+    }
+
+
+}
