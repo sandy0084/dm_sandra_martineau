@@ -23,7 +23,7 @@ class VetoController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $vetos = $em->getRepository('AppBundle:Veto')->findAll();
-        return $this->render('AppBundle:veto:index.html.twig', array(
+        return $this->render('AppBundle:Veto:index.html.twig', array(
             'vetos' => $vetos,
         ));
     }
@@ -42,7 +42,7 @@ class VetoController extends Controller
             $em->flush();
             return $this->redirectToRoute('veto_show', array('id' => $veto->getId()));
         }
-        return $this->render('AppBundle:veto:new.html.twig', array(
+        return $this->render('AppBundle:Veto:new.html.twig', array(
             'veto' => $veto,
             'form' => $form->createView(),
         ));
@@ -54,7 +54,7 @@ class VetoController extends Controller
     public function showAction(Veto $veto)
     {
         $deleteForm = $this->createDeleteForm($veto);
-        return $this->render('AppBundle:veto:show.html.twig', array(
+        return $this->render('AppBundle:Veto:show.html.twig', array(
             'veto' => $veto,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -72,7 +72,7 @@ class VetoController extends Controller
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('veto_edit', array('id' => $veto->getId()));
         }
-        return $this->render('AppBundle:veto:edit.html.twig', array(
+        return $this->render('AppBundle:Veto:edit.html.twig', array(
             'veto' => $veto,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

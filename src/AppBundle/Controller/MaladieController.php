@@ -24,7 +24,7 @@ class MaladieController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $maladies = $em->getRepository('AppBundle:Maladie')->findAll();
-        return $this->render('AppBundle:maladie:index.html.twig', array(
+        return $this->render('AppBundle:Maladie:index.html.twig', array(
             'maladies' => $maladies,
         ));
     }
@@ -44,7 +44,7 @@ class MaladieController extends Controller
             $em->flush();
             return $this->redirectToRoute('maladie_show', array('id' => $maladie->getId()));
         }
-        return $this->render('AppBundle:maladie:new.html.twig', array(
+        return $this->render('AppBundle:Maladie:new.html.twig', array(
             'maladie' => $maladie,
             'form' => $form->createView(),
         ));
@@ -57,7 +57,7 @@ class MaladieController extends Controller
     public function showAction(Maladie $maladie)
     {
         $deleteForm = $this->createDeleteForm($maladie);
-        return $this->render('AppBundle:maladie:show.html.twig', array(
+        return $this->render('AppBundle:Maladie:show.html.twig', array(
             'maladie' => $maladie,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -75,7 +75,7 @@ class MaladieController extends Controller
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('maladie_edit', array('id' => $maladie->getId()));
         }
-        return $this->render('AppBundle:maladie:edit.html.twig', array(
+        return $this->render('AppBundle:Maladie:edit.html.twig', array(
             'maladie' => $maladie,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

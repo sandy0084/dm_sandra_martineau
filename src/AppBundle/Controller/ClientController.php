@@ -30,7 +30,7 @@ class ClientController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $clients = $em->getRepository('AppBundle:Client')->findAll();
-        return $this->render('AppBundle:client:index.html.twig', array(
+        return $this->render('AppBundle:Client:index.html.twig', array(
             'clients' => $clients,
         ));
     }
@@ -50,7 +50,7 @@ class ClientController extends Controller
             $em->flush();
             return $this->redirectToRoute('client_show', array('id' => $client->getId()));
         }
-        return $this->render('AppBundle:client:new.html.twig', array(
+        return $this->render('AppBundle:Client:new.html.twig', array(
             'client' => $client,
             'form' => $form->createView(),
         ));
@@ -63,7 +63,7 @@ class ClientController extends Controller
     public function showAction(Client $client)
     {
         $deleteForm = $this->createDeleteForm($client);
-        return $this->render('AppBundle:client:show.html.twig', array(
+        return $this->render('AppBundle:Client:show.html.twig', array(
             'client' => $client,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -82,7 +82,7 @@ class ClientController extends Controller
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('client_edit', array('id' => $client->getId()));
         }
-        return $this->render('AppBundle:client:edit.html.twig', array(
+        return $this->render('AppBundle:Client:edit.html.twig', array(
             'client' => $client,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

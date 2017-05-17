@@ -4,7 +4,8 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Espece;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 
 /**
@@ -43,7 +44,7 @@ class EspeceController extends Controller
             $em->flush();
             return $this->redirectToRoute('espece_show', array('id' => $espece->getId()));
         }
-        return $this->render('AppBundle:espece:new.html.twig', array(
+        return $this->render('AppBundle:Espece:new.html.twig', array(
             'espece' => $espece,
             'form' => $form->createView(),
         ));
@@ -56,7 +57,7 @@ class EspeceController extends Controller
     public function showAction(Espece $espece)
     {
         $deleteForm = $this->createDeleteForm($espece);
-        return $this->render('AppBundle:espece:show.html.twig', array(
+        return $this->render('AppBundle:Espece:show.html.twig', array(
             'espece' => $espece,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -75,7 +76,7 @@ class EspeceController extends Controller
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('espece_edit', array('id' => $espece->getId()));
         }
-        return $this->render('AppBundle:espece:edit.html.twig', array(
+        return $this->render('AppBundle:Espece:edit.html.twig', array(
             'espece' => $espece,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

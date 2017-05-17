@@ -22,7 +22,7 @@ class RdvController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $rdvs = $em->getRepository('AppBundle:Rdv')->findAll();
-        return $this->render('AppBundle:rdv:index.html.twig', array(
+        return $this->render('AppBundle:Rdv:index.html.twig', array(
             'rdvs' => $rdvs,
         ));
     }
@@ -42,7 +42,7 @@ class RdvController extends Controller
             $em->flush();
             return $this->redirectToRoute('rdv_show', array('id' => $rdv->getId()));
         }
-        return $this->render('AppBundle:rdv:new.html.twig', array(
+        return $this->render('AppBundle:Rdv:new.html.twig', array(
             'rdv' => $rdv,
             'form' => $form->createView(),
         ));
@@ -55,7 +55,7 @@ class RdvController extends Controller
     public function showAction(Rdv $rdv)
     {
         $deleteForm = $this->createDeleteForm($rdv);
-        return $this->render('AppBundle:rdv:show.html.twig', array(
+        return $this->render('AppBundle:Rdv:show.html.twig', array(
             'rdv' => $rdv,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -74,7 +74,7 @@ class RdvController extends Controller
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('rdv_edit', array('id' => $rdv->getId()));
         }
-        return $this->render('AppBundle:rdv:edit.html.twig', array(
+        return $this->render('AppBundle:Rdv:edit.html.twig', array(
             'rdv' => $rdv,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
