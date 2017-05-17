@@ -36,7 +36,7 @@ class Espece
      *
      * @ORM\Column(name="nom", type="string", length=255, unique=true)
      */
-    private $nom;
+    private $libelle;
 
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Client", mappedBy="espece")
@@ -60,11 +60,6 @@ class Espece
         $this->vetos = new ArrayCollection();
     }
 
-    public function __toString()
-    {
-        return $this->getNom();
-    }
-
     /**
      * @return int
      */
@@ -84,17 +79,17 @@ class Espece
     /**
      * @return string
      */
-    public function getNom()
+    public function getLibelle()
     {
-        return $this->nom;
+        return $this->libelle;
     }
 
     /**
-     * @param string $nom
+     * @param string $libelle
      */
-    public function setNom($nom)
+    public function setLibelle($libelle)
     {
-        $this->nom = $nom;
+        $this->libelle = $libelle;
     }
 
     /**
@@ -144,6 +139,7 @@ class Espece
     {
         $this->vetos = $vetos;
     }
+
 
 
 }

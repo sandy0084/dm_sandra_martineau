@@ -41,13 +41,6 @@ class Client
     private $nom;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="couleur", type="string", length=255)
-     */
-    private $couleur;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="createdAt", type="date")
@@ -107,22 +100,6 @@ class Client
     public function setNom($nom)
     {
         $this->nom = $nom;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCouleur()
-    {
-        return $this->couleur;
-    }
-
-    /**
-     * @param string $couleur
-     */
-    public function setCouleur($couleur)
-    {
-        $this->couleur = $couleur;
     }
 
     /**

@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
+<head>
+    <title>
+        {% block title %}
+            La clinique vétérinaire
+        {% endblock %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/dist/css/main.min.css') }}" type="text/css" media="all"/>
+    {% endblock %}
+</head>
+<body>
+<div id="header">
+    {% include 'default/header.html.twig' %}
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 content">
+            {% block layout %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+<div id="footer">
+    {% include 'default/footer.html.twig' %}
+</div>
+</div>
+{% block javascripts %}
+    <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js') }}"></script>
+    <script src="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/dist/js/main.min.js') }}"></script>
+{% endblock %}
+</body>
 </html>

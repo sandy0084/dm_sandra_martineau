@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block layout %}
+    <h1>Vétérinaire</h1>
+
+    <div class="table-responsive">        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ veto.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ veto.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ veto.prenom }}</td>
+            </tr>
+            </tbody>
+        </table> </div>
+
+    <ul>
+        <li>
+            <a href="{{ path('veto_index') }}">Retour à la liste</a>
+        </li>
+        <li>
+            <a href="{{ path('veto_edit', { 'id': veto.id }) }}">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -52,18 +52,34 @@ class Maladie
 
     /**
      * @var
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\RendezVous", mappedBy="maladie")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Rdv", mappedBy="maladie")
      */
-    private $rendezVouses;
+    private $rdvs;
 
     public function __construct() {
         $this->especes = new ArrayCollection();
-        $this->rendezVouses = new ArrayCollection();
+        $this->rdvs = new ArrayCollection();
     }
 
     function __toString()
     {
         return $this->getNom();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRdvs()
+    {
+        return $this->rdvs;
+    }
+
+    /**
+     * @param mixed $rdvs
+     */
+    public function setRdvs($rdvs)
+    {
+        $this->rdvs = $rdvs;
     }
 
     /**
@@ -130,21 +146,6 @@ class Maladie
         $this->especes = $especes;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getRendezVouses()
-    {
-        return $this->rendezVouses;
-    }
-
-    /**
-     * @param mixed $rendezVouses
-     */
-    public function setRendezVouses($rendezVouses)
-    {
-        $this->rendezVouses = $rendezVouses;
-    }
 
 
 }

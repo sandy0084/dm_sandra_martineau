@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block layout %}
+    <h1>Fichier Clients</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Créé le</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for client in clients %}
+            <tr>
+                <td><a href="{{ path('client_show', { 'id': client.id }) }}">{{ client.id }}</a></td>
+                <td>{{ client.nom }}</td>
+                <td>{% if client.createdAt %}{{ client.createdAt|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('client_show', { 'id': client.id }) }}">Afficher</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('client_edit', { 'id': client.id }) }}">Modifier</a>
+                        </li>
+                    </ul>
+
+                    <div class="btn-group" role="group" aria-label="...">
+                        <a role="button" class="btn btn-primary" href="{{ path('client_show', { 'id': client.id }) }}">Afficher</a>
+                        <a role="button" class="btn btn-primary" href="{{ path('client_edit', { 'id': client.id }) }}">Modifier</a>
+                    </div>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-success" href="{{ path('client_new') }}" role="button">Créer nouveau client</a>
+{% endblock %}

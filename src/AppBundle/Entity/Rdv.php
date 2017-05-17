@@ -12,12 +12,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class RendezVous
+ * Class Rdv
  *
- * @ORM\Table(name="rendez_vous")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\RendezVousRepository")
+ * @ORM\Table(name="rdv")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\RdvRepository")
  */
-class RendezVous
+class Rdv
 {
     /**
      * @var int
@@ -50,14 +50,14 @@ class RendezVous
     private $isComing = false;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Client", inversedBy="rendezVous")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Client", inversedBy="rdvs")
      * @ORM\JoinColumn(name="client_id", referencedColumnName="id")
      */
     private $client;
 
     /**
      * @var
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Maladie", inversedBy="rendezVouses")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Maladie", inversedBy="rdvs")
      * @ORM\JoinColumn(name="maladie_id", referencedColumnName="id")
      */
     private $maladie;
@@ -186,5 +186,6 @@ class RendezVous
         $this->veto = $veto;
     }
 
+    
 
 }

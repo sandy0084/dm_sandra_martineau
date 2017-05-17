@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block layout %}
+    <h1>Fichier Vétérinaires</h1>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Espèces prise en charge</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for veto in vetos %}
+                <tr>
+                    <td><a href="{{ path('veto_show', { 'id': veto.id }) }}">{{ veto.id }}</a></td>
+                    <td>{{ docteur.nom }}</td>
+                    <td>{{ docteur.prenom }}</td>
+                    <td>
+                        <ul class="list-unstyled">
+                            {% for espece in veto.especes %}
+                                <li>{{ espece }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <a role="button" class="btn btn-primary" href="{{ path('veto_show', { 'id': veto.id }) }}">Afficher</a>
+                            <a role="button" class="btn btn-primary" href="{{ path('veto_edit', { 'id': veto.id }) }}">Modifier</a>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a class="btn btn-success" href="{{ path('veto_new') }}" role="button">Créer nouveau vétérinaire</a>
+{% endblock %}
+
