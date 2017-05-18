@@ -16,7 +16,10 @@ class MaladieType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('traitement')->add('especes');
+        $builder
+            ->add('nom')
+            ->add('traitement')
+            ->add('especes');
     }
 
     /**

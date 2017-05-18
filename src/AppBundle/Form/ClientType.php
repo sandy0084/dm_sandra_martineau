@@ -26,7 +26,7 @@ class ClientType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('couleur');
+            ->add('espece');
     }
 
     /**
