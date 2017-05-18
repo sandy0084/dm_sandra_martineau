@@ -148,4 +148,52 @@ class Veto
     }
 
 
+
+    /**
+     * Add espece
+     *
+     * @param \AppBundle\Entity\Espece $espece
+     *
+     * @return Veto
+     */
+    public function addEspece(\AppBundle\Entity\Espece $espece)
+    {
+        $this->especes[] = $espece;
+
+        return $this;
+    }
+
+    /**
+     * Remove espece
+     *
+     * @param \AppBundle\Entity\Espece $espece
+     */
+    public function removeEspece(\AppBundle\Entity\Espece $espece)
+    {
+        $this->especes->removeElement($espece);
+    }
+
+    /**
+     * Add rdv
+     *
+     * @param \AppBundle\Entity\Rdv $rdv
+     *
+     * @return Veto
+     */
+    public function addRdv(\AppBundle\Entity\Rdv $rdv)
+    {
+        $this->rdvs[] = $rdv;
+
+        return $this;
+    }
+
+    /**
+     * Remove rdv
+     *
+     * @param \AppBundle\Entity\Rdv $rdv
+     */
+    public function removeRdv(\AppBundle\Entity\Rdv $rdv)
+    {
+        $this->rdvs->removeElement($rdv);
+    }
 }

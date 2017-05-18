@@ -188,4 +188,14 @@ class Rdv
 
     
 
+
+    /**
+     * Get isComing
+     *
+     * @return boolean
+     */
+    public function getIsComing()
+    {
+        return $this->isComing;
+    }
 }

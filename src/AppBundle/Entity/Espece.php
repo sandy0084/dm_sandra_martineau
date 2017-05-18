@@ -10,6 +10,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -49,7 +50,7 @@ class Espece
     private $maladies;
 
     /**
-     * @var
+     * @var Collection
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Veto", mappedBy="especes")
      */
     private $vetos;
@@ -142,4 +143,76 @@ class Espece
 
 
 
+
+    /**
+     * Add client
+     *
+     * @param \AppBundle\Entity\Client $client
+     *
+     * @return Espece
+     */
+    public function addClient(\AppBundle\Entity\Client $client)
+    {
+        $this->clients[] = $client;
+
+        return $this;
+    }
+
+    /**
+     * Remove client
+     *
+     * @param \AppBundle\Entity\Client $client
+     */
+    public function removeClient(\AppBundle\Entity\Client $client)
+    {
+        $this->clients->removeElement($client);
+    }
+
+    /**
+     * Add malady
+     *
+     * @param \AppBundle\Entity\Maladie $malady
+     *
+     * @return Espece
+     */
+    public function addMalady(\AppBundle\Entity\Maladie $malady)
+    {
+        $this->maladies[] = $malady;
+
+        return $this;
+    }
+
+    /**
+     * Remove malady
+     *
+     * @param \AppBundle\Entity\Maladie $malady
+     */
+    public function removeMalady(\AppBundle\Entity\Maladie $malady)
+    {
+        $this->maladies->removeElement($malady);
+    }
+
+    /**
+     * Add veto
+     *
+     * @param \AppBundle\Entity\Veto $veto
+     *
+     * @return Espece
+     */
+    public function addVeto(\AppBundle\Entity\Veto $veto)
+    {
+        $this->vetos[] = $veto;
+
+        return $this;
+    }
+
+    /**
+     * Remove veto
+     *
+     * @param \AppBundle\Entity\Veto $veto
+     */
+    public function removeVeto(\AppBundle\Entity\Veto $veto)
+    {
+        $this->vetos->removeElement($veto);
+    }
 }

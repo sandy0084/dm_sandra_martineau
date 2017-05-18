@@ -9,6 +9,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -54,9 +55,10 @@ class Client
     private $espece;
 
     /**
+     * @var Collection
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Rdv", mappedBy="client")
      */
-    private $rdv;
+    private $rdvs;
 
 
 
@@ -134,20 +136,39 @@ class Client
         $this->espece = $espece;
     }
 
+
+
     /**
-     * @return mixed
+     * Add rdv
+     *
+     * @param \AppBundle\Entity\Rdv $rdv
+     *
+     * @return Client
      */
-    public function getRdv()
+    public function addRdv(\AppBundle\Entity\Rdv $rdv)
     {
-        return $this->rdv;
+        $this->rdvs[] = $rdv;
+
+        return $this;
     }
 
     /**
-     * @param mixed $rdv
+     * Remove rdv
+     *
+     * @param \AppBundle\Entity\Rdv $rdv
      */
-    public function setRdv($rdv)
+    public function removeRdv(\AppBundle\Entity\Rdv $rdv)
     {
-        $this->rdv = $rdv;
+        $this->rdvs->removeElement($rdv);
     }
 
+    /**
+     * Get rdvs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getRdvs()
+    {
+        return $this->rdvs;
+    }
 }

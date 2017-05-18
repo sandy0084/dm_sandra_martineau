@@ -24,7 +24,7 @@ class EspeceController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $especes = $em->getRepository('AppBundle:Espece')->findAll();
-        return $this->render('AppBundle:espece:index.html.twig', array(
+        return $this->render('AppBundle:Espece:index.html.twig', array(
             'especes' => $especes,
         ));
     }
