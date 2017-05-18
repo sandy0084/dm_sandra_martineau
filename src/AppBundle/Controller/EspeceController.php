@@ -28,6 +28,7 @@ class EspeceController extends Controller
             'especes' => $especes,
         ));
     }
+    
     /**
      *
      * @Route("/new", name="espece_new")
@@ -38,17 +39,20 @@ class EspeceController extends Controller
         $espece = new Espece();
         $form = $this->createForm('AppBundle\Form\EspeceType', $espece);
         $form->handleRequest($request);
+        
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($espece);
             $em->flush();
             return $this->redirectToRoute('espece_show', array('id' => $espece->getId()));
         }
+        
         return $this->render('AppBundle:Espece:new.html.twig', array(
             'espece' => $espece,
             'form' => $form->createView(),
         ));
     }
+    
     /**
      *
      * @Route("/{id}", name="espece_show")
@@ -62,6 +66,7 @@ class EspeceController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
+    
     /**
      *
      * @Route("/{id}/edit", name="espece_edit")
@@ -72,16 +77,19 @@ class EspeceController extends Controller
         $deleteForm = $this->createDeleteForm($espece);
         $editForm = $this->createForm('AppBundle\Form\EspeceType', $espece);
         $editForm->handleRequest($request);
+        
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('espece_edit', array('id' => $espece->getId()));
         }
+        
         return $this->render('AppBundle:Espece:edit.html.twig', array(
             'espece' => $espece,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
+    
     /**
      *
      * @Route("/{id}", name="espece_delete")
@@ -98,6 +106,7 @@ class EspeceController extends Controller
         }
         return $this->redirectToRoute('espece_index');
     }
+    
     /**
      *
      * @param Espece $espece The espece entity

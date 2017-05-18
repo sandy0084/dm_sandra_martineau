@@ -54,14 +54,14 @@ class Client
     private $espece;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\RendezVous", mappedBy="client")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Rdv", mappedBy="client")
      */
-    private $rendezVous;
+    private $rdv;
 
 
 
     public function __construct() {
-        $this->rendezVous = new ArrayCollection();
+        $this->rdv = new ArrayCollection();
     }
 
     public function __toString()
@@ -137,17 +137,17 @@ class Client
     /**
      * @return mixed
      */
-    public function getRendezVous()
+    public function getRdv()
     {
-        return $this->rendezVous;
+        return $this->rdv;
     }
 
     /**
-     * @param mixed $rendezVous
+     * @param mixed $rdv
      */
-    public function setRendezVous($rendezVous)
+    public function setRdv($rdv)
     {
-        $this->rendezVous = $rendezVous;
+        $this->rdv = $rdv;
     }
 
 }

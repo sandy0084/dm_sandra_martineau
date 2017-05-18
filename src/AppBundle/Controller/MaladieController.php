@@ -24,10 +24,12 @@ class MaladieController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $maladies = $em->getRepository('AppBundle:Maladie')->findAll();
+        
         return $this->render('AppBundle:Maladie:index.html.twig', array(
             'maladies' => $maladies,
         ));
     }
+    
     /**
      *
      * @Route("/new", name="maladie_new")
@@ -36,32 +38,38 @@ class MaladieController extends Controller
     public function newAction(Request $request)
     {
         $maladie = new Maladie();
+        
         $form = $this->createForm('AppBundle\Form\MaladieType', $maladie);
         $form->handleRequest($request);
+        
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($maladie);
             $em->flush();
             return $this->redirectToRoute('maladie_show', array('id' => $maladie->getId()));
         }
+        
         return $this->render('AppBundle:Maladie:new.html.twig', array(
             'maladie' => $maladie,
             'form' => $form->createView(),
         ));
     }
+
+
     /**
+     * @param Maladie $maladie The maladie entity
      *
-     * @Route("/{id}", name="maladie_show")
-     * @Method("GET")
+     * @return \Symfony\Component\Form\Form The form
      */
-    public function showAction(Maladie $maladie)
+    private function createDeleteForm(Maladie $maladie)
     {
-        $deleteForm = $this->createDeleteForm($maladie);
-        return $this->render('AppBundle:Maladie:show.html.twig', array(
-            'maladie' => $maladie,
-            'delete_form' => $deleteForm->createView(),
-        ));
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('maladie_delete', array('id' => $maladie->getId())))
+            ->setMethod('DELETE')
+            ->getForm()
+            ;
     }
+    
     /**
      * @Route("/{id}/edit", name="maladie_edit")
      * @Method({"GET", "POST"})
@@ -71,10 +79,12 @@ class MaladieController extends Controller
         $deleteForm = $this->createDeleteForm($maladie);
         $editForm = $this->createForm('AppBundle\Form\MaladieType', $maladie);
         $editForm->handleRequest($request);
+        
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('maladie_edit', array('id' => $maladie->getId()));
         }
+        
         return $this->render('AppBundle:Maladie:edit.html.twig', array(
             'maladie' => $maladie,
             'edit_form' => $editForm->createView(),
@@ -90,25 +100,29 @@ class MaladieController extends Controller
     {
         $form = $this->createDeleteForm($maladie);
         $form->handleRequest($request);
+        
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($maladie);
             $em->flush();
         }
+        
         return $this->redirectToRoute('maladie_index');
     }
+
+
     /**
-     * @param Maladie $maladie The maladie entity
      *
-     * @return \Symfony\Component\Form\Form The form
+     * @Route("/{id}", name="maladie_show")
+     * @Method("GET")
      */
-    private function createDeleteForm(Maladie $maladie)
+    public function showAction(Maladie $maladie)
     {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('maladie_delete', array('id' => $maladie->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
+        $deleteForm = $this->createDeleteForm($maladie);
+        return $this->render('AppBundle:Maladie:show.html.twig', array(
+            'maladie' => $maladie,
+            'delete_form' => $deleteForm->createView(),
+        ));
     }
 }
 

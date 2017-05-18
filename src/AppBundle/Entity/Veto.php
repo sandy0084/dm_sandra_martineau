@@ -53,7 +53,7 @@ class Veto
 
     /**
      * @var
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\RendezVous", mappedBy="veto")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Rdv", mappedBy="veto")
      */
     private $rdvs;
 

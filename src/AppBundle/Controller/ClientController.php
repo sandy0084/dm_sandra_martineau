@@ -44,12 +44,14 @@ class ClientController extends Controller
         $client = new Client();
         $form = $this->createForm('AppBundle\Form\ClientType', $client);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($client);
             $em->flush();
             return $this->redirectToRoute('client_show', array('id' => $client->getId()));
         }
+        
         return $this->render('AppBundle:Client:new.html.twig', array(
             'client' => $client,
             'form' => $form->createView(),
@@ -63,6 +65,7 @@ class ClientController extends Controller
     public function showAction(Client $client)
     {
         $deleteForm = $this->createDeleteForm($client);
+
         return $this->render('AppBundle:Client:show.html.twig', array(
             'client' => $client,
             'delete_form' => $deleteForm->createView(),
@@ -78,10 +81,12 @@ class ClientController extends Controller
         $deleteForm = $this->createDeleteForm($client);
         $editForm = $this->createForm('AppBundle\Form\ClientType', $client);
         $editForm->handleRequest($request);
+
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('client_edit', array('id' => $client->getId()));
         }
+
         return $this->render('AppBundle:Client:edit.html.twig', array(
             'client' => $client,
             'edit_form' => $editForm->createView(),
@@ -97,6 +102,7 @@ class ClientController extends Controller
     {
         $form = $this->createDeleteForm($client);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($client);

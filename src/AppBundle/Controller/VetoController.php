@@ -23,30 +23,13 @@ class VetoController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $vetos = $em->getRepository('AppBundle:Veto')->findAll();
+        
         return $this->render('AppBundle:Veto:index.html.twig', array(
             'vetos' => $vetos,
         ));
     }
-    /**
-     * @Route("/new", name="veto_new")
-     * @Method({"GET", "POST"})
-     */
-    public function newAction(Request $request)
-    {
-        $veto = new Veto();
-        $form = $this->createForm('AppBundle\Form\VetoType', $veto);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($veto);
-            $em->flush();
-            return $this->redirectToRoute('veto_show', array('id' => $veto->getId()));
-        }
-        return $this->render('AppBundle:Veto:new.html.twig', array(
-            'veto' => $veto,
-            'form' => $form->createView(),
-        ));
-    }
+    
+    
     /**
      * @Route("/{id}", name="veto_show")
      * @Method("GET")
@@ -54,11 +37,27 @@ class VetoController extends Controller
     public function showAction(Veto $veto)
     {
         $deleteForm = $this->createDeleteForm($veto);
+        
         return $this->render('AppBundle:Veto:show.html.twig', array(
             'veto' => $veto,
             'delete_form' => $deleteForm->createView(),
         ));
     }
+
+
+    /**
+     * @param Veto $veto The veto entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createDeleteForm(Veto $veto)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('veto_delete', array('id' => $veto->getId())))
+            ->setMethod('DELETE')
+            ->getForm();
+    }
+    
     /**
      * @Route("/{id}/edit", name="veto_edit")
      * @Method({"GET", "POST"})
@@ -72,12 +71,14 @@ class VetoController extends Controller
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('veto_edit', array('id' => $veto->getId()));
         }
+        
         return $this->render('AppBundle:Veto:edit.html.twig', array(
             'veto' => $veto,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
+    
     /**
      * @Route("/{id}", name="veto_delete")
      * @Method("DELETE")
@@ -86,24 +87,38 @@ class VetoController extends Controller
     {
         $form = $this->createDeleteForm($veto);
         $form->handleRequest($request);
+        
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($veto);
             $em->flush();
         }
+        
         return $this->redirectToRoute('veto_index');
     }
+
+
     /**
-     * @param Veto $veto The veto entity
-     *
-     * @return \Symfony\Component\Form\Form The form
+     * @Route("/new", name="veto_new")
+     * @Method({"GET", "POST"})
      */
-    private function createDeleteForm(Veto $veto)
+    public function newAction(Request $request)
     {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('veto_delete', array('id' => $veto->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-            ;
+        $veto = new Veto();
+
+        $form = $this->createForm('AppBundle\Form\VetoType', $veto);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($veto);
+            $em->flush();
+            return $this->redirectToRoute('veto_show', array('id' => $veto->getId()));
+        }
+
+        return $this->render('AppBundle:Veto:new.html.twig', array(
+            'veto' => $veto,
+            'form' => $form->createView(),
+        ));
     }
 }
