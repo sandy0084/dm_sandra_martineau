@@ -47,6 +47,8 @@ class Maladie
     /**
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Espece", inversedBy="maladies")
      * @ORM\JoinTable(name="maladies_especes")
+     * joinColumns={@ORM\JoinColumn(name="maladies_id", referencedColumnName="id")}
+     * inverseJoinColumns={ORM\JoinColumn(name="especes_id", referencedColumnName="id")}
      */
     private $especes;
 

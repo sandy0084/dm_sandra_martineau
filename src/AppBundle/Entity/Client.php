@@ -137,7 +137,7 @@ class Client
      *
      * @return Client
      */
-    public function setEspece(\AppBundle\Entity\Espece $espece = null)
+    public function setEspece(Espece $espece = null)
     {
         $this->espece = $espece;
 
@@ -161,7 +161,7 @@ class Client
      *
      * @return Client
      */
-    public function addRdv(\AppBundle\Entity\Rdv $rdv)
+    public function addRdv(Rdv $rdv)
     {
         $this->rdvs[] = $rdv;
 
@@ -173,7 +173,7 @@ class Client
      *
      * @param \AppBundle\Entity\Rdv $rdv
      */
-    public function removeRdv(\AppBundle\Entity\Rdv $rdv)
+    public function removeRdv(Rdv $rdv)
     {
         $this->rdvs->removeElement($rdv);
     }
