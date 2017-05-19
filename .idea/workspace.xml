@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86c7c2fa-2c88-402e-a8ec-e17aa0106024" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig" />
     </list>
     <ignored path="dm_sandra_martineau.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,121 +24,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/new.html.twig">
+      <file leaf-file-name="header.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+            <state relative-caret-position="270">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/new.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/new.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-              <folding>
-                <element signature="e#12#37#0#Twig" expanded="true" />
+                <element signature="e#570#582#0#Twig" expanded="true" />
+                <element signature="e#645#654#0#Twig" expanded="true" />
+                <element signature="e#717#730#0#Twig" expanded="true" />
+                <element signature="e#793#805#0#Twig" expanded="true" />
+                <element signature="e#868#878#0#Twig" expanded="true" />
+                <element signature="e#1354#1366#0#Twig" expanded="true" />
+                <element signature="e#1434#1444#0#Twig" expanded="true" />
+                <element signature="e#1838#1847#0#Twig" expanded="true" />
+                <element signature="e#1915#1922#0#Twig" expanded="true" />
+                <element signature="e#2321#2334#0#Twig" expanded="true" />
+                <element signature="e#2402#2413#0#Twig" expanded="true" />
+                <element signature="e#2811#2823#0#Twig" expanded="true" />
+                <element signature="e#2891#2901#0#Twig" expanded="true" />
+                <element signature="e#3303#3313#0#Twig" expanded="true" />
+                <element signature="e#3381#3389#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,7 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/Veto/new.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Veto/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Espece/edit.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Espece/index.html.twig" />
@@ -224,6 +108,7 @@
         <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/new.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig" />
       </list>
     </option>
   </component>
@@ -661,12 +546,12 @@
       <workItem from="1495090858517" duration="1727000" />
       <workItem from="1495107526302" duration="20000" />
       <workItem from="1495113311402" duration="5757000" />
-      <workItem from="1495176577586" duration="8941000" />
+      <workItem from="1495176577586" duration="9203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33408000" />
+    <option name="totallyTimeSpent" value="33670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1277" height="730" extended-state="6" />
@@ -822,14 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1168,6 +1045,30 @@
           <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
             <element signature="e#12#37#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#570#582#0#Twig" expanded="true" />
+            <element signature="e#645#654#0#Twig" expanded="true" />
+            <element signature="e#717#730#0#Twig" expanded="true" />
+            <element signature="e#793#805#0#Twig" expanded="true" />
+            <element signature="e#868#878#0#Twig" expanded="true" />
+            <element signature="e#1354#1366#0#Twig" expanded="true" />
+            <element signature="e#1434#1444#0#Twig" expanded="true" />
+            <element signature="e#1838#1847#0#Twig" expanded="true" />
+            <element signature="e#1915#1922#0#Twig" expanded="true" />
+            <element signature="e#2321#2334#0#Twig" expanded="true" />
+            <element signature="e#2402#2413#0#Twig" expanded="true" />
+            <element signature="e#2811#2823#0#Twig" expanded="true" />
+            <element signature="e#2891#2901#0#Twig" expanded="true" />
+            <element signature="e#3303#3313#0#Twig" expanded="true" />
+            <element signature="e#3381#3389#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
