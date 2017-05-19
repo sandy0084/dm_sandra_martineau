@@ -21,7 +21,8 @@
                        aria-expanded="false">Client<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('client_index') }}">Index</a></li>
-                        <li><a href="{{ path('client_new') }}">New</a></li>
+                        <li><a href="{{ path('client_new') }}">Créer</a></li>
+                        {# <li><a href="{{ path('client_show', { 'id': client.id }) }}">Liste</a></li> #}
                     </ul>
                 </li>
 
@@ -31,6 +32,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('rdv_index') }}">Index</a></li>
                         <li><a href="{{ path('rdv_new') }}">New</a></li>
+                        {# <li><a href="{{ path('rdv_show', { 'id': rdv.id }) }}">Liste</a></li> #}
                     </ul>
                 </li>
 
@@ -40,6 +42,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('maladie_index') }}">Index</a></li>
                         <li><a href="{{ path('maladie_new') }}">New</a></li>
+                        {# <li><a href="{{ path('maladie_show', { 'id': maladie.id }) }}">Liste</a></li> #}
                     </ul>
                 </li>
 
@@ -49,6 +52,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('espece_index') }}">Index</a></li>
                         <li><a href="{{ path('espece_new') }}">New</a></li>
+                        {# <li><a href="{{ path('espece_show', { 'id': espece.id }) }}">Liste</a></li> #}
                     </ul>
                 </li>
 
@@ -58,6 +62,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('veto_index') }}">Index</a></li>
                         <li><a href="{{ path('veto_new') }}">New</a></li>
+                        {# <li><a href="{{ path('veto_show', { 'id': veto.id }) }}">Liste</a></li> #}
                     </ul>
                 </li>
             </ul>
