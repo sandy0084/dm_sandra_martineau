@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86c7c2fa-2c88-402e-a8ec-e17aa0106024" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Client/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Espece/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/new.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/AppBundle/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/AppBundle/views/default/index.html.twig" />
     </list>
     <ignored path="dm_sandra_martineau.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,42 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/new.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-              <folding>
-                <element signature="e#12#36#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Maladie/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding>
-                <element signature="e#12#36#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-              <folding>
-                <element signature="e#12#36#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Rdv/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -151,14 +97,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+            <state relative-caret-position="93">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding>
                 <element signature="e#12#36#0#Twig" expanded="true" />
+                <element signature="e#682#691#0#Twig" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/footer.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/RdvType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/Client/edit.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Client/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/Veto/edit.html.twig" />
@@ -222,6 +188,7 @@
         <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/new.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/AppBundle/views/default/index.html.twig" />
       </list>
     </option>
   </component>
@@ -595,6 +562,36 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm_sandra_martineau" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dm_sandra_martineau" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Client" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -677,12 +674,12 @@
       <workItem from="1495090858517" duration="1727000" />
       <workItem from="1495107526302" duration="20000" />
       <workItem from="1495113311402" duration="5757000" />
-      <workItem from="1495176577586" duration="1002000" />
+      <workItem from="1495176577586" duration="1165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25469000" />
+    <option name="totallyTimeSpent" value="25632000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1277" height="730" extended-state="6" />
@@ -730,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/footer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -817,20 +807,6 @@
         <state relative-caret-position="274">
           <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="86" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1180,11 +1156,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/Veto/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        <state relative-caret-position="93">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+            <element signature="e#682#691#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/footer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
             <element signature="e#12#36#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/AppBundle/views/default/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
