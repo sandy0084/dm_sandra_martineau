@@ -49,7 +49,9 @@ class ClientController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($client);
             $em->flush();
-            return $this->redirectToRoute('client_show', array('id' => $client->getId()));
+            return $this->redirectToRoute('client_show', array(
+                'id' => $client->getId()
+            ));
         }
         
         return $this->render('AppBundle:Client:new.html.twig', array(

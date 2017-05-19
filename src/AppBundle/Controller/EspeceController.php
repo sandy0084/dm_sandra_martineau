@@ -44,7 +44,9 @@ class EspeceController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($espece);
             $em->flush();
-            return $this->redirectToRoute('espece_show', array('id' => $espece->getId()));
+            return $this->redirectToRoute('espece_show', array(
+                'id' => $espece->getId()
+            ));
         }
         
         return $this->render('AppBundle:Espece:new.html.twig', array(
