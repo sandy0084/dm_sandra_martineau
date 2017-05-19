@@ -63,7 +63,7 @@ class Client
 
 
     public function __construct() {
-        $this->rdv = new ArrayCollection();
+        $this->rdvs = new ArrayCollection();
     }
 
     public function __toString()
@@ -73,7 +73,9 @@ class Client
 
 
     /**
-     * @return int
+     * Get id
+     *
+     * @return integer
      */
     public function getId()
     {
@@ -81,14 +83,22 @@ class Client
     }
 
     /**
-     * @param int $id
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Client
      */
-    public function setId($id)
+    public function setNom($nom)
     {
-        $this->id = $id;
+        $this->nom = $nom;
+
+        return $this;
     }
 
     /**
+     * Get nom
+     *
      * @return string
      */
     public function getNom()
@@ -97,14 +107,22 @@ class Client
     }
 
     /**
-     * @param string $nom
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Client
      */
-    public function setNom($nom)
+    public function setCreatedAt($createdAt)
     {
-        $this->nom = $nom;
+        $this->createdAt = $createdAt;
+
+        return $this;
     }
 
     /**
+     * Get createdAt
+     *
      * @return \DateTime
      */
     public function getCreatedAt()
@@ -113,30 +131,28 @@ class Client
     }
 
     /**
-     * @param \DateTime $createdAt
+     * Set espece
+     *
+     * @param \AppBundle\Entity\Espece $espece
+     *
+     * @return Client
      */
-    public function setCreatedAt($createdAt)
+    public function setEspece(\AppBundle\Entity\Espece $espece = null)
     {
-        $this->createdAt = $createdAt;
+        $this->espece = $espece;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get espece
+     *
+     * @return \AppBundle\Entity\Espece
      */
     public function getEspece()
     {
         return $this->espece;
     }
-
-    /**
-     * @param mixed $espece
-     */
-    public function setEspece($espece)
-    {
-        $this->espece = $espece;
-    }
-
-
 
     /**
      * Add rdv

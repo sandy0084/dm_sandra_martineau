@@ -61,6 +61,11 @@ class Espece
         $this->vetos = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->getLibelle().' '.$this->getClients();
+    }
+    
     /**
      * @return int
      */
